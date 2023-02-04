@@ -1,0 +1,50 @@
+name: get-resolvers
+
+# taken from https://github.com/BonJarber/fresh-resolvers/blob/main/.github/workflows/refresh-resolvers.yaml
+# which seems to be broken now
+on:
+  schedule:
+    - cron:  '0 21 * * *'
+
+jobs:
+  get-resolvers:
+    runs-on: ubuntu-20.04
+    steps:
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.6'
+    
+      - name: checkout
+        uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          repository: 'vortexau/dnsvalidator'
+          path: dnsvalidator
+    
+      - name: Install and run DNS Validator
+        run: |
+          cd dnsvalidator
+          python3 setup.py install
+          pip install contextvars
+          dnsvalidator -tL https://public-dns.info/nameservers.txt -threads 90 --silent -o ~/resolvers.txt
+    
+      
+      - name: Commit
+        run: |
+          mv ~/resolvers.txt .
+          git config --local user.email "research@sybilscan.com"
+          git config --local user.name "[bot]sybsilscan"
+          git add resolvers.txt
+          git commit -m "✨ Updating Resolvers"
+    
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
