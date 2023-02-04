@@ -31,12 +31,11 @@ jobs:
           cd dnsvalidator
           python3 setup.py install
           pip install contextvars
-          dnsvalidator -tL https://gist.githubusercontent.com/devanshbatham/ae9a4ccfb9e00ca4e1cc71f8a5d53768/raw/49d82a511b27f7ebf7fac5e9d789067e8a559bbd/nameservers.txt -threads 80 --silent -o ~/resolvers.txt
+          dnsvalidator -tL https://gist.githubusercontent.com/devanshbatham/ae9a4ccfb9e00ca4e1cc71f8a5d53768/raw/49d82a511b27f7ebf7fac5e9d789067e8a559bbd/nameservers.txt -threads 80 --silent -o resolvers.txt
     
       
       - name: Commit
         run: |
-          mv ~/resolvers.txt .
           git config --local user.email "research@sybilscan.com"
           git config --local user.name "[bot] sybsilscan"
           git add resolvers.txt
