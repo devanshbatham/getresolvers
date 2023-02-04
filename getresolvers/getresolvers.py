@@ -47,4 +47,6 @@ def main():
     for resolver in resolvers_list:
         print(resolver)
 
+
     logging.info(f"\n✅ Resolvers found : {len(resolvers_list)}")
+    logging.info(f"✅ Output saved in resolvers.txt")
