@@ -2,6 +2,8 @@ name: get-resolvers
 
 # inspired from https://github.com/BonJarber/fresh-resolvers/blob/main/.github/workflows/refresh-resolvers.yaml
 # which seems to be broken now
+
+
 on:
   push
 
