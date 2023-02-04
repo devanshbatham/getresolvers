@@ -22,7 +22,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'getresolvers = getresolvers.revwhoix:main'
+            'getresolvers = getresolvers.getresolvers:main'
         ]
     },
     keywords=['getresolvers']
