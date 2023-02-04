@@ -39,7 +39,10 @@ def main():
     """)
     logging.info("🔍 Fetching resolvers\n")
     resolvers_source = "https://raw.githubusercontent.com/Sybil-Scan/getresolvers/main/resolvers.txt"
-    response = requests.get(resolvers_source)
+    try:
+        response = requests.get(resolvers_source)
+    except BlockingIOError as e: 
+        logging.error("❌ Error occured while fetching resolvers [use VPN if raw.githubusercontent.com is blocked via ISP]")
     with open('resolvers.txt', 'w') as f:
         f.write(response.text)
 
