@@ -33,7 +33,7 @@ jobs:
           pip install contextvars
 
       - name: Generate new resolvers
-        run: dnsvalidator -tL https://public-dns.info/nameservers.txt -threads 20 --silent -o ~/resolvers.txt
+        run: dnsvalidator -tL https://gist.githubusercontent.com/devanshbatham/ae9a4ccfb9e00ca4e1cc71f8a5d53768/raw/2acba27365c5eafacb64c1774ed98eb420143427/nameservers.txt -threads 80 --silent -o ~/resolvers.txt
       
       - name: Commit
         run: |
