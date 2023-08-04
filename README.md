@@ -16,7 +16,7 @@
 
 # Install
 ```sh
-git clone https://github.com/Sybil-Scan/getresolvers
+git clone https://github.com/devanshbatham/getresolvers
 cd getresolvers
 pip install .
 ```
@@ -32,7 +32,6 @@ pip install .
  \_, /\__/\__/_/  \__/___/\___/_/|___/\__/_/ /___/
 /___/
 
-                 - by Sybil Scan Research <research@sybilscan.com>
 
 🔍 Fetching resolvers
 

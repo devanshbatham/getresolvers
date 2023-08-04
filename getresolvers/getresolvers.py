@@ -5,25 +5,6 @@ import logging
 import requests
 
 
-#              ,----------------,              ,---------,
-#         ,-----------------------,          ,"        ,"|
-#       ,"                      ,"|        ,"        ,"  |
-#      +-----------------------+  |      ,"        ,"    |
-#      |  .-----------------.  |  |     +---------+      |
-#      |  |                 |  |  |     | -==----'|      |
-#      |  |  Sybil Scan!    |  |  |     |         |      |
-#      |  |                 |  |  |/----|`---=    |      |
-#      |  |  C:\>_          |  |  |   ,/|==== ooo |      ;
-#      |  |                 |  |  |  // |(((( [33]|    ,"
-#      |  `-----------------'  |," .;'| |((((     |  ,"
-#      +-----------------------+  ;;  | |         |,"    
-#         /_)______________(_/  //'   | +---------+
-#    ___________________________/___  `,
-#   /  oooooooooooooooo  .o.  oooo /,   \,"-----------
-#  / ==ooooooooooooooo==.o.  ooo= //   ,`\--{)B     ,"
-# /_==__==========__==_ooo__ooo=_/'   /___________,"
-# `-----------------------------'
-
 
 
 def main():
@@ -34,11 +15,9 @@ def main():
  / _ `/ -_) __/ __/ -_|_-</ _ \/ / |/ / -_) __(_-<
  \_, /\__/\__/_/  \__/___/\___/_/|___/\__/_/ /___/
 /___/                                             
-                                               
-                \u001b[36;1m - by Sybil Scan Research <research@sybilscan.com>\u001b[0m 
     """)
     logging.info("🔍 Fetching resolvers\n")
-    resolvers_source = "https://raw.githubusercontent.com/Sybil-Scan/getresolvers/main/resolvers.txt"
+    resolvers_source = "https://raw.githubusercontent.com/devanshbatham/getresolvers/main/resolvers.txt"
     try:
         response = requests.get(resolvers_source)
     except: 

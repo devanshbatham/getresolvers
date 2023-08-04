@@ -41,8 +41,8 @@ jobs:
       
       - name: Commit
         run: |
-          git config --local user.email "research@sybilscan.com"
-          git config --local user.name "[bot] sybsilscan"
+          git config --local user.email "devanshbatham009@gmail.com"
+          git config --local user.name "[bot] automation"
           git add resolvers.txt
           git commit -m "✨ Updating Resolvers"
     
