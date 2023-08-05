@@ -14,7 +14,7 @@ def main():
   ___ ____ / /________ ___ ___  / /  _____ _______
  / _ `/ -_) __/ __/ -_|_-</ _ \/ / |/ / -_) __(_-<
  \_, /\__/\__/_/  \__/___/\___/_/|___/\__/_/ /___/
-/___/                                             
+/___/   \u001b[0m                                  
     """)
     logging.info("🔍 Fetching resolvers\n")
     resolvers_source = "https://raw.githubusercontent.com/devanshbatham/getresolvers/main/resolvers.txt"
