@@ -14,6 +14,8 @@
 </p>
 
 
+![getresolvers](https://github.com/devanshbatham/getresolvers/blob/main/static/getresolvers.png?raw=true)
+
 # Install
 ```sh
 git clone https://github.com/devanshbatham/getresolvers
