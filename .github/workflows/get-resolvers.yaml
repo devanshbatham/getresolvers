@@ -35,6 +35,7 @@ jobs:
           cd dnsvalidator
           python3 setup.py install
           pip install contextvars
+          pip install importlib-metadata
 
       - name: Generate new resolvers
         run: dnsvalidator -tL https://gist.githubusercontent.com/devanshbatham/ae9a4ccfb9e00ca4e1cc71f8a5d53768/raw/fcd046c247130a909a19dfd9732f0daf7725d8f6/nameservers.txt -threads 40 --silent > resolvers.txt
